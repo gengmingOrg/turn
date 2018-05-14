@@ -1,0 +1,10 @@
+.one {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #adadad;
+  transition: all 0.1s;
+  border-radius: 50%;
+  background: url(3.png) no-repeat center center;
+  background-size: cover;
+  margin: 50px auto;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>旋转</title>
+  <link href="./turn.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <img id='img' src="4.jpg" style="transform:rotate(20)" />
+  <button type="button" name="button" class='torotate'>点击旋转</button>
+</body>
+</body>
+<script src="./pluging/jquery-1.8.0.min.js"></script>
+<script src="./pluging/jQueryRotate.js"></script>
+<script>
+  $(function() {
+    $('.torotate').click(() => {
+      var num = (Math.random() * 5 + 1) * 1000;
+      moveRotate(num);
+    })
+  });
+
+  var moveRotate = function(num) {
+    var angle = Math.random() * 360;
+    $("#img").rotate({ //旋转
+      angle: 15, //角度
+      duration: num, //持续时间
+      animateTo: angle , //angle是图片上各奖项对应的角度，2160是我要让指针旋转6圈。所以最后的结束的角度就是这样子^^
+      callback: function() {
+        alert(angle + "度 持续时间"+num/1000+"秒 ！");
+
+      }
+    });
+  }
+</script>
+
+
+
+</html>
